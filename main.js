@@ -8,7 +8,7 @@ let coffeeSearch = document.querySelector('#searchBox')
 
 function renderCoffee(coffee) {
     let html = '<tr class="coffee">';
-    html += '<td><h2><strong>' + coffee.name + '</strong> <span class="roast">' + coffee.roast + '</span></h2></td>';
+    html += '<td><h2>' + coffee.name + ' <span class="roast">' + coffee.roast + '</span></h2></td>';
     html += '</tr>';
     return html;
 }
