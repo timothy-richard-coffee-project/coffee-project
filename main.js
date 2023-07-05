@@ -22,8 +22,8 @@ function renderCoffees(coffees) {
 function updateCoffees(event) {
     event.preventDefault(); // Prevent form submission
 
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
+    const selectedRoast = roastSelection.value;
+    const filteredCoffees = [];
 
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast || selectedRoast === 'all') {

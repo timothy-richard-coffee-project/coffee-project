@@ -2,9 +2,7 @@ thead {
     display: none;
 }
 
-tr id{
-    display: none;
-}
+
 
 table {
     border-collapse: collapse;
@@ -21,3 +19,7 @@ td, th {
 }
 
 .navbar-expand
+
+.card {
+    margin-top: 50px; !important;
+}
