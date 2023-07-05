@@ -2,6 +2,10 @@ thead {
     display: none;
 }
 
+.roast {
+    font-size: 18px;
+    color: #888888;
+}
 
 
 table {
