@@ -1,6 +1,10 @@
 "use strict"
 
-
+let tbody = document.querySelector('#coffees');
+let submitButton = document.querySelector('#submit');
+let roastSelection = document.querySelector('#roast-selection');
+let coffeeForm = document.querySelector('#coffee-form');
+let coffeeSearch = document.querySelector('#searchBox')
 
 function renderCoffee(coffee) {
     let html = '<tr class="coffee">';
@@ -20,20 +24,38 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
+    const searchedCoffee = coffeeSearch.value.toLowerCase()
+    const selectedRoast = roastSelection.value.toLowerCase();
+    const searchValue = coffeeSearch.value.toLowerCase();
+    let filteredCoffees = coffees;
+    if (selectedRoast !== 'all') {
+        filteredCoffees = filteredCoffees.filter(function(coffee){
+            return coffee.roast.toLowerCase() === selectedRoast;
+        });
+    }
+    if (coffeeSearch !== '') {
+        filteredCoffees = filteredCoffees.filter(function(coffee){
+            return coffee.name.toLowerCase().includes(searchValue)
+        });
+    }
 
-    const selectedRoast = roastSelection.value;
-    const filteredCoffees = [];
-
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast || selectedRoast === 'all') {
-            filteredCoffees.push(coffee);
-        }
-    });
 
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// function searchCoffee(event) {
+//     event.preventDefault(); // Prevent form submission
+//     const searchedCoffee = coffeeSearch.value.toLowerCase()
+//     const coffeeSearch = []
+//     coffees.forEach(function(coffee) {
+//         if (coffee.name.toLowerCase() === searchedCoffee.toLowerCase()) {
+//             coffeeSearch.push(coffee);
+//         }
+//     });
+//     tbody.innerHTML = renderCoffees(coffeeSearch);
+//
+// }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -53,12 +75,9 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-var coffeeForm = document.querySelector('#coffee-form');
-
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+coffeeSearch.addEventListener('input', updateCoffees);
 coffeeForm.addEventListener('submit', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
+
