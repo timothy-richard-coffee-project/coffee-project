@@ -8,7 +8,7 @@ let coffeeSearch = document.querySelector('#searchBox')
 
 function renderCoffee(coffee) {
     let html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
+    // html += '<td>' + coffee.id + '</td>';
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
@@ -25,7 +25,7 @@ function renderCoffees(coffees) {
 
 function updateCoffees(event) {
     event.preventDefault();
-    const searchedCoffee = coffeeSearch.value.toLowerCase()
+    // const searchedCoffee = coffeeSearch.value.toLowerCase()
     const selectedRoast = roastSelection.value.toLowerCase();
     const searchValue = coffeeSearch.value.toLowerCase();
     let filteredCoffees = coffees;
