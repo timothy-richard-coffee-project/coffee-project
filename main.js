@@ -1,5 +1,7 @@
 "use strict"
 
+
+
 function renderCoffee(coffee) {
     let html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
