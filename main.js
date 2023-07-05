@@ -40,8 +40,11 @@ function updateCoffees(event) {
         });
     }
 
-
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    if (filteredCoffees.length === 0) {
+        tbody.innerHTML = `<h3>No coffees were found</h3>`;
+    } else {
+        tbody.innerHTML = renderCoffees(filteredCoffees);
+    }
 }
 
 // function searchCoffee(event) {
@@ -78,6 +81,6 @@ var coffees = [
 tbody.innerHTML = renderCoffees(coffees);
 
 coffeeSearch.addEventListener('input', updateCoffees);
-coffeeForm.addEventListener('submit', updateCoffees);
+// coffeeForm.addEventListener('submit', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 
