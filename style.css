@@ -1,3 +1,7 @@
+thead {
+    display: none;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -8,6 +12,8 @@ td, th {
     padding: 5px 10px;
 }
 
-thead {
-    display: none;
+.centered {
+    text-align: center;
 }
+
+.navbar-expand
