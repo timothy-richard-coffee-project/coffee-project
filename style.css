@@ -33,3 +33,10 @@ td, th {
 .jumbotron-text {
     color: white;
 }
+
+.card {
+
+}
+h3 {
+    margin: 50px 20px; !important;
+}

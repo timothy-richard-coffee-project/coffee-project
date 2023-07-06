@@ -11,6 +11,9 @@ let coffeeAdd = document.querySelector('#button-addon2')
 function renderCoffee(coffee) {
     let html = '<tr class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
+    // if (coffees.roast == 'light') {
+    //     html += <img src="img/download.jpeg" alt=""></img>
+    // }
     html += '<div>';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
