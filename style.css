@@ -23,3 +23,13 @@ td, th {
 .card {
     margin-top: 50px; !important;
 }
+
+#jumbotron {
+    background-image: url("img/coffee-1983332-1280.jpg");
+    background-color: #cccccc;
+}
+
+
+.jumbotron-text {
+    color: white;
+}

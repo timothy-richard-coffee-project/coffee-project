@@ -1,5 +1,6 @@
 "use strict"
 
+
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
@@ -99,3 +100,10 @@ coffeeSearch.addEventListener('input', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 coffeeAdd.addEventListener('click', addCoffee)
 
+let userEmail = prompt('Sign Up For Our Rewards and Get Brew Brother Bucks with Every Purchase!             Email :')
+
+if (userEmail != null) {
+    alert('Thanks For Signing Up Check Your Email For Conformation')
+} else {
+    alert('Maybe next time :)')
+}
