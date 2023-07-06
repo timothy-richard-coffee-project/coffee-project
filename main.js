@@ -9,15 +9,21 @@ let coffeeSearch = document.querySelector('#searchBox')
 let coffeeAdd = document.querySelector('#button-addon2')
 
 function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
+    let html = '<div class="col-4 mt-5">'
     // html += '<td>' + coffee.id + '</td>';
-    // if (coffees.roast == 'light') {
-    //     html += <img src="img/download.jpeg" alt=""></img>
-    // }
-    html += '<div>';
-    html += '<h2>' + coffee.name + '</h2>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</tr>';
+    if (coffee.roast === 'light') {
+        html += '<img class="coffee-beans" src="img/download.jpeg" alt="light coffee">'
+    }
+    if (coffee.roast === 'medium') {
+        html += '<img class="coffee-beans" src="img/IMG_2397.jpeg" alt=medium coffee">'
+    }
+    if (coffee.roast === 'dark') {
+        html += '<img class="coffee-beans" src="img/download%20(1).jpeg" alt=dark coffee">'
+    }
+    html += '<div class="d-flex">';
+    html += '<h2 class="text-light">' + coffee.name + '</h2>';
+    html += '<p class="align-items-center text-light">' + coffee.roast + '</p>';
+    html += '</div>';
     html += '</div>';
     return html;
 }

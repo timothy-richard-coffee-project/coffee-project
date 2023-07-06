@@ -35,8 +35,37 @@ td, th {
 }
 
 .card {
+    background-color: black;
 
 }
 h3 {
     margin: 50px 20px; !important;
+}
+
+.coffee-beans {
+    height: 194px;
+    width: 194px;
+    flex: fit-content;
+}
+
+h2 {
+    justify-content: flex-end;
+    color: white;
+}
+
+body {
+    background-image: url("img/download (2).jpeg");
+
+}
+
+.list-group {
+    background: black;
+}
+
+.action-title {
+    background-color: white;
+    margin: 0 30px;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 20px;
+    padding: 10px;
 }

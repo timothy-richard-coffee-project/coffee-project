@@ -18,23 +18,23 @@
     </a>
 
     <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li><a href="#">
+        <li class="nav-item"><a href="#" class="nav-link active text-dark" aria-current="page">Home</a></li>
+        <li>
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                <button class="btn btn-secondary dropdown-toggle text-dark" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                     BUY NOW !
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item text-dark" href="#">By The Cup</a></li>
+                    <li><a class="dropdown-item text-dark" href="#">By The Pound</a></li>
+                    <li><a class="dropdown-item text-dark" href="#">Parties & Catering</a></li>
                 </ul>
             </div>
-        </a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        </li>
+        <li class="nav-item"><a href="#" class="text-dark nav-link">Specials</a></li>
+        <li class="nav-item"><a href="#" class="text-dark nav-link">Locations</a></li>
+        <li class="nav-item"><a href="#" class="text-dark nav-link">Meet the Team</a></li>
     </ul>
 </header>
 <div class="p-5 text-center bg-body-tertiary rounded-3" id="jumbotron">
@@ -62,7 +62,7 @@
     <div class="row d-flex">
         <div class=" order-1 d-flex">
             <div class="col-6 coffee-boxes">
-                <h3 class="centered">Search Coffee</h3>
+                <h3 class="action-title centered">Search Coffee</h3>
                 <div class="card" style="width: 100%;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item centered">Roast</li>
@@ -89,7 +89,7 @@
             </div>
             <div class="col-6 coffee-boxes">
 
-                    <h3 class="centered">Add Coffee</h3>
+                    <h3 class="action-title centered">Add Coffee</h3>
                     <div class="card" style="width: 100%;">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item centered">Roast</li>
@@ -120,17 +120,8 @@
         </div>
     </div>
 </div>
-<div class="col-12 flex-row mb-3">
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>NAME</th>
-            <th>ROAST</th>
-        </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<div class="container">
+        <div class="row" id="coffees"></div>
 </div>
 </div>
 </div>
